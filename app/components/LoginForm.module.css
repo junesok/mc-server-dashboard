@@ -1,0 +1,90 @@
+.backdrop {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  background: var(--bg);
+  color: var(--text-primary);
+  text-align: center;
+  letter-spacing: 0.15em;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.12);
+}
+
+.input::placeholder {
+  letter-spacing: 0;
+  color: var(--text-tertiary);
+}
+
+.error {
+  color: var(--danger);
+  font-size: 0.83rem;
+  margin: 0;
+}
+
+.button {
+  padding: 0.8rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  margin-top: 0.25rem;
+}
+
+.button:hover {
+  opacity: 0.88;
+}
+
+.button:active {
+  opacity: 0.76;
+}
