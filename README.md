@@ -48,7 +48,7 @@ npm run dev
 
 ## 서버 배포
 
-`main` 브랜치에 push하면 GitHub Actions가 자동으로 서버에 배포합니다.
+`main` 브랜치에 push하면 GitHub Actions가 자동으로 서버에 배포
 
 ```
 git push origin main
@@ -58,7 +58,7 @@ git push origin main
 
 ### 인스턴스가 꺼진 상태에서 push했을 때
 
-배포가 실패했다면 인스턴스를 켠 후 아래 명령어로 재실행합니다.
+배포가 실패했다면 인스턴스를 켠 후 아래 명령어로 재실행
 
 ```bash
 gh run rerun --repo junesok/mc-server-dashboard --failed
@@ -66,7 +66,7 @@ gh run rerun --repo junesok/mc-server-dashboard --failed
 
 ### GitHub Secrets 설정
 
-GitHub 리포지토리 Settings → Secrets and variables → Actions에 아래 두 값을 등록해야 합니다.
+GitHub 리포지토리 Settings → Secrets and variables → Actions에 아래 두 값을 등록
 
 | Secret | 값 |
 |--------|----|
