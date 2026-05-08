@@ -56,6 +56,14 @@ git push origin main
 
 배포 흐름: `git pull` → `npm install` → `npm run build` → `pm2 restart`
 
+### 인스턴스가 꺼진 상태에서 push했을 때
+
+배포가 실패했다면 인스턴스를 켠 후 아래 명령어로 재실행합니다.
+
+```bash
+gh run rerun --repo junesok/mc-server-dashboard --failed
+```
+
 ### GitHub Secrets 설정
 
 GitHub 리포지토리 Settings → Secrets and variables → Actions에 아래 두 값을 등록해야 합니다.
