@@ -48,16 +48,22 @@ npm run dev
 
 ## 서버 배포
 
-로컬에서 파일 수정 후 서버에 업로드하고 빌드
+`main` 브랜치에 push하면 GitHub Actions가 자동으로 서버에 배포합니다.
 
-```bash
-# 파일 업로드
-scp -i your-key.pem path/to/modified-file.tsx ubuntu@your-server-ip:/home/ubuntu/dashboard/path/to/modified-file.tsx
-
-# 서버에서 빌드 및 재시작
-ssh -i your-key.pem ubuntu@your-server-ip \
-  "cd /home/ubuntu/dashboard && npm run build && pm2 restart mc-dashboard"
 ```
+git push origin main
+```
+
+배포 흐름: `git pull` → `npm install` → `npm run build` → `pm2 restart`
+
+### GitHub Secrets 설정
+
+GitHub 리포지토리 Settings → Secrets and variables → Actions에 아래 두 값을 등록해야 합니다.
+
+| Secret | 값 |
+|--------|----|
+| `SERVER_HOST` | 서버 공인 IP |
+| `SSH_PRIVATE_KEY` | SSH 접속용 PEM 키 파일 내용 |
 
 ## 프로젝트 구조
 
