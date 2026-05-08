@@ -46,7 +46,6 @@ export default function LoginForm({ onLogin }: LoginFormProps) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className={styles.input}
-            placeholder="비밀번호"
             autoFocus
             disabled={loading}
           />
